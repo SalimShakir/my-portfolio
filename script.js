@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-   window.addEventListener("scroll", () => {
+  const elements = document.querySelectorAll(".reveal-item, .reveal-up");
 
-const nav=document.querySelector("nav");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
 
-if(window.scrollY>40){
-
-nav.style.padding="14px 5vw";
-
-}
-
-else{
-
-nav.style.padding="18px 5vw";
-
-}
-
-});
+  elements.forEach((el) => observer.observe(el));
 });
