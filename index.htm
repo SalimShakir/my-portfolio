@@ -4,80 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salim Shakir — Data Analytics Portfolio</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
- <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for contact icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav id="navbar">
   <a href="#hero" class="nav-logo">salim.dev</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about"   data-section="about">About</a></li>
+    <li><a href="#skills"  data-section="skills">Skills</a></li>
+    <li><a href="#certifications" data-section="certifications">Certifications</a></li>
+    <li><a href="#projects" data-section="projects">Projects</a></li>
+    <li><a href="#contact" data-section="contact">Contact</a></li>
   </ul>
+
+  <!-- Mobile hamburger -->
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- HERO -->
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
 <section id="hero">
+
+  <!-- Subtle animated orbs in background -->
+  <div class="hero-orb hero-orb--1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb--2" aria-hidden="true"></div>
+
   <div class="hero-text">
-    <p class="hero-eyebrow">BCom · Data Analytics</p>
-    <h1>Salim<br>Shakir<br><em>Mannakadavan</em></h1>
-    <p class="hero-sub">
+    <!-- Each child gets a staggered reveal via JS adding .is-visible -->
+    <p class="hero-eyebrow reveal-item">BCom · Data Analytics</p>
+
+    <h1 class="reveal-item" style="--reveal-delay:0.1s">
+      Salim<br>
+      Shakir<br>
+      <em>Mannakadavan</em>
+    </h1>
+
+    <p class="hero-sub reveal-item" style="--reveal-delay:0.22s">
       3rd year BCom student turning raw numbers into clear decisions — through Excel dashboards, Power BI reports, SQL queries, and Tableau visuals.
     </p>
-    <div class="hero-ctas">
-      <a href="#projects" class="btn-primary">View My Work</a>
+
+    <div class="hero-ctas reveal-item" style="--reveal-delay:0.34s">
+      <a href="#projects" class="btn-primary">
+        View My Work
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </a>
       <a href="#contact" class="btn-ghost">Get In Touch</a>
     </div>
   </div>
 
-  <div class="hero-visual">
-    <div class="chart-wrapper">
+  <!-- Floating chart visual -->
+  <div class="hero-visual reveal-item" style="--reveal-delay:0.46s">
+    <div class="chart-wrapper floating">
       <div class="chart-header">
         <span class="chart-title">Skills overview</span>
-        <span class="chart-badge">Live</span>
+        <span class="chart-badge">
+          <span class="badge-dot" aria-hidden="true"></span>Live
+        </span>
       </div>
-      <div class="bars">
+
+      <div class="bars" role="img" aria-label="Bar chart showing skill proficiency levels">
         <div class="bar-group">
-          <div class="bar" style="height:88%; background: linear-gradient(180deg,#2563eb,#1d4ed8); animation-delay:0.1s"></div>
+          <div class="bar" style="--bar-height:88%; background: linear-gradient(180deg,#2563eb,#1d4ed8); --bar-delay:0.1s"></div>
           <span class="bar-label">Excel</span>
         </div>
         <div class="bar-group">
-          <div class="bar" style="height:78%; background: linear-gradient(180deg,#7c3aed,#6d28d9); animation-delay:0.25s"></div>
+          <div class="bar" style="--bar-height:78%; background: linear-gradient(180deg,#7c3aed,#6d28d9); --bar-delay:0.25s"></div>
           <span class="bar-label">Power BI</span>
         </div>
         <div class="bar-group">
-          <div class="bar" style="height:62%; background: linear-gradient(180deg,#2563eb,#7c3aed); animation-delay:0.4s"></div>
+          <div class="bar" style="--bar-height:62%; background: linear-gradient(180deg,#2563eb,#7c3aed); --bar-delay:0.4s"></div>
           <span class="bar-label">SQL</span>
         </div>
         <div class="bar-group">
-          <div class="bar" style="height:60%; background: linear-gradient(180deg,#7c3aed,#2563eb); animation-delay:0.55s"></div>
+          <div class="bar" style="--bar-height:60%; background: linear-gradient(180deg,#7c3aed,#2563eb); --bar-delay:0.55s"></div>
           <span class="bar-label">Tableau</span>
         </div>
         <div class="bar-group">
-          <div class="bar" style="height:72%; background: linear-gradient(180deg,#1d4ed8,#7c3aed); animation-delay:0.7s"></div>
+          <div class="bar" style="--bar-height:72%; background: linear-gradient(180deg,#1d4ed8,#7c3aed); --bar-delay:0.7s"></div>
           <span class="bar-label">BCom</span>
         </div>
       </div>
+
       <div class="chart-footer">
-        <div class="stat"><span class="stat-num">3rd</span><span class="stat-lbl">Year</span></div>
-        <div class="stat"><span class="stat-num">4+</span><span class="stat-lbl">Tools</span></div>
-        <div class="stat"><span class="stat-num">∞</span><span class="stat-lbl">Learning</span></div>
+        <div class="stat">
+          <span class="stat-num">3rd</span>
+          <span class="stat-lbl">Year</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">4+</span>
+          <span class="stat-lbl">Tools</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-lbl">Learning</span>
+        </div>
       </div>
     </div>
   </div>
+
 </section>
 
-<!-- ABOUT -->
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
 <section id="about">
-  <p class="section-label">Who I Am</p>
-  <h2>Commerce meets<br>Data Science</h2>
+  <p class="section-label reveal-up">Who I Am</p>
+  <h2 class="reveal-up" style="--reveal-delay:0.05s">Commerce meets<br>Data Science</h2>
 
   <div class="about-grid">
-    <div class="about-text">
+    <div class="about-text reveal-up" style="--reveal-delay:0.1s">
       <p>
         I'm <strong>Salim Shakir Mannakadavan</strong>, a 3rd year Bachelor of Commerce student with a growing passion for <strong>data analytics</strong>. I believe the best business decisions are the ones backed by data — and I'm building the skills to make that happen.
       </p>
@@ -90,30 +143,41 @@
     </div>
 
     <div class="about-details">
-      <div class="detail-row">
-        <div class="detail-icon">🎓</div>
+      <!-- Each detail-row gets staggered via CSS nth-child -->
+      <div class="detail-row reveal-up" style="--reveal-delay:0.15s">
+        <div class="detail-icon" aria-hidden="true">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
         <div>
           <div class="detail-key">Education</div>
-          <div class="detail-val">Bachelor of Commerce (BCom)
-2024 – 28 (Expected)</div>
+          <div class="detail-val">Bachelor of Commerce (BCom)<br>2024 – 28 (Expected)</div>
         </div>
       </div>
-      <div class="detail-row">
-        <div class="detail-icon">📍</div>
+
+      <div class="detail-row reveal-up" style="--reveal-delay:0.2s">
+        <div class="detail-icon" aria-hidden="true">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
         <div>
           <div class="detail-key">Location</div>
           <div class="detail-val">Kerala, India</div>
         </div>
       </div>
-      <div class="detail-row">
-        <div class="detail-icon">🎯</div>
+
+      <div class="detail-row reveal-up" style="--reveal-delay:0.25s">
+        <div class="detail-icon" aria-hidden="true">
+          <i class="fa-solid fa-crosshairs"></i>
+        </div>
         <div>
           <div class="detail-key">Focus Area</div>
           <div class="detail-val">Data Analytics &amp; Business Intelligence</div>
         </div>
       </div>
-      <div class="detail-row">
-        <div class="detail-icon">🚀</div>
+
+      <div class="detail-row reveal-up" style="--reveal-delay:0.3s">
+        <div class="detail-icon" aria-hidden="true">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
         <div>
           <div class="detail-key">Currently</div>
           <div class="detail-val">Building portfolio projects &amp; expanding SQL skills</div>
@@ -123,110 +187,144 @@
   </div>
 </section>
 
-<!-- SKILLS -->
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
 <section id="skills">
-  <p class="section-label">Technical Skills</p>
-  <h2>Tools I work with</h2>
-  <p class="section-intro">A toolkit built through coursework, self-study, and hands-on practice.</p>
+  <p class="section-label reveal-up">Technical Skills</p>
+  <h2 class="reveal-up" style="--reveal-delay:0.05s">Tools I work with</h2>
+  <p class="section-intro reveal-up" style="--reveal-delay:0.1s">A toolkit built through coursework, self-study, and hands-on practice.</p>
 
   <div class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-icon">📊</div>
+
+    <div class="skill-card reveal-up" style="--reveal-delay:0.1s">
+      <div class="skill-icon" aria-hidden="true"><i class="fa-solid fa-table-columns"></i></div>
       <div class="skill-name">Microsoft Excel</div>
       <div class="skill-desc">PivotTables, VLOOKUP/XLOOKUP, conditional formatting, data cleaning, and financial modelling fundamentals.</div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+      <div class="skill-bar-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Excel proficiency 85%">
+        <div class="skill-bar-fill" data-width="85%"></div>
+      </div>
       <div class="skill-level">Advanced</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">📈</div>
+    <div class="skill-card reveal-up" style="--reveal-delay:0.15s">
+      <div class="skill-icon" aria-hidden="true"><i class="fa-solid fa-chart-bar"></i></div>
       <div class="skill-name">Power BI</div>
       <div class="skill-desc">Building interactive dashboards, DAX measures, data modelling, and connecting multiple data sources for visual reporting.</div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:72%"></div></div>
+      <div class="skill-bar-track" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Power BI proficiency 72%">
+        <div class="skill-bar-fill" data-width="72%"></div>
+      </div>
       <div class="skill-level">Intermediate</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">🗄️</div>
+    <div class="skill-card reveal-up" style="--reveal-delay:0.2s">
+      <div class="skill-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></div>
       <div class="skill-name">SQL</div>
       <div class="skill-desc">SELECT queries, JOINs, GROUP BY aggregations, filtering, and basic database exploration using tools like MySQL or PostgreSQL.</div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:58%"></div></div>
+      <div class="skill-bar-track" role="progressbar" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency 58%">
+        <div class="skill-bar-fill" data-width="58%"></div>
+      </div>
       <div class="skill-level">Learning</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">🎨</div>
+    <div class="skill-card reveal-up" style="--reveal-delay:0.25s">
+      <div class="skill-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></div>
       <div class="skill-name">Tableau</div>
       <div class="skill-desc">Creating charts, trend lines, and visualisations. Exploring Tableau Public to publish and share analytical stories.</div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:55%"></div></div>
+      <div class="skill-bar-track" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="Tableau proficiency 55%">
+        <div class="skill-bar-fill" data-width="55%"></div>
+      </div>
       <div class="skill-level">Learning</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">💼</div>
+    <div class="skill-card reveal-up" style="--reveal-delay:0.3s">
+      <div class="skill-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></div>
       <div class="skill-name">Business &amp; Finance</div>
       <div class="skill-desc">Accounting principles, financial statements, cost analysis, and understanding the commercial context behind data.</div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:80%"></div></div>
+      <div class="skill-bar-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Business & Finance proficiency 80%">
+        <div class="skill-bar-fill" data-width="80%"></div>
+      </div>
       <div class="skill-level">Strong Foundation</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">🧠</div>
+    <div class="skill-card reveal-up" style="--reveal-delay:0.35s">
+      <div class="skill-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
       <div class="skill-name">Data Storytelling</div>
       <div class="skill-desc">Translating complex findings into clear narratives for non-technical audiences using charts, summaries, and reports.</div>
-      <div class="skill-bar-track"><div class="skill-bar-fill" style="width:68%"></div></div>
+      <div class="skill-bar-track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Data Storytelling proficiency 68%">
+        <div class="skill-bar-fill" data-width="68%"></div>
+      </div>
       <div class="skill-level">Developing</div>
     </div>
+
   </div>
 </section>
-<!-- CERTIFICATES -->
+
+
+<!-- ============================================================
+     CERTIFICATIONS
+     ============================================================ -->
 <section id="certifications">
-  <p class="section-label">Credentials</p>
-  <h2>Certifications & Job Simulations</h2>
+  <p class="section-label reveal-up">Credentials</p>
+  <h2 class="reveal-up" style="--reveal-delay:0.05s">Certifications &amp; Job Simulations</h2>
 
-  <div class="skills-grid">
+  <div class="skills-grid certs-grid">
 
-    <div class="skill-card">
-      <div class="skill-icon">🏆</div>
+    <div class="skill-card cert-card reveal-up" style="--reveal-delay:0.1s">
+      <div class="cert-badge" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
       <div class="skill-name">Power BI for Beginners</div>
-      <div class="skill-desc">Simplilearn • Completed June 2026</div>
+      <div class="skill-desc">Simplilearn</div>
+      <div class="cert-meta">Completed June 2026</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">💼</div>
+    <div class="skill-card cert-card reveal-up" style="--reveal-delay:0.15s">
+      <div class="cert-badge" aria-hidden="true"><i class="fa-solid fa-building-columns"></i></div>
       <div class="skill-name">Deloitte Data Analytics Job Simulation</div>
-      <div class="skill-desc">Forage • Completed 2026</div>
+      <div class="skill-desc">Forage</div>
+      <div class="cert-meta">Completed 2026</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">🤖</div>
+    <div class="skill-card cert-card reveal-up" style="--reveal-delay:0.2s">
+      <div class="cert-badge" aria-hidden="true"><i class="fa-solid fa-microchip"></i></div>
       <div class="skill-name">Tata GenAI Powered Data Analytics Job Simulation</div>
-      <div class="skill-desc">Forage • Completed 2026</div>
+      <div class="skill-desc">Forage</div>
+      <div class="cert-meta">Completed 2026</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">🧠</div>
+    <div class="skill-card cert-card reveal-up" style="--reveal-delay:0.25s">
+      <div class="cert-badge" aria-hidden="true"><i class="fa-solid fa-robot"></i></div>
       <div class="skill-name">AI Tools Workshop</div>
-      <div class="skill-desc">BE10X • Practical exposure to AI productivity and business tools</div>
+      <div class="skill-desc">BE10X</div>
+      <div class="cert-meta">Practical exposure to AI productivity and business tools</div>
     </div>
 
-    <div class="skill-card">
-      <div class="skill-icon">📊</div>
+    <div class="skill-card cert-card reveal-up" style="--reveal-delay:0.3s">
+      <div class="cert-badge" aria-hidden="true"><i class="fa-solid fa-network-wired"></i></div>
       <div class="skill-name">Cisco Data Analytics Essentials</div>
-      <div class="skill-desc">Currently In Progress • Excel, SQL, Tableau & Analytics Portfolio</div>
+      <div class="skill-desc">Cisco Networking Academy</div>
+      <div class="cert-meta in-progress">In Progress — Excel, SQL, Tableau &amp; Analytics Portfolio</div>
     </div>
 
   </div>
 </section>
-<!-- PROJECTS -->
+
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
 <section id="projects">
-  <p class="section-label">My Work</p>
-  <h2>Projects &amp; Case Studies</h2>
-  <p class="section-intro">Real problems, real data — practising the full analytics workflow from raw data to insight.</p>
+  <p class="section-label reveal-up">My Work</p>
+  <h2 class="reveal-up" style="--reveal-delay:0.05s">Projects &amp; Case Studies</h2>
+  <p class="section-intro reveal-up" style="--reveal-delay:0.1s">Real problems, real data — practising the full analytics workflow from raw data to insight.</p>
 
   <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-thumb blue">📉</div>
+
+    <div class="project-card reveal-up" style="--reveal-delay:0.1s">
+      <div class="project-thumb blue" aria-hidden="true">
+        <i class="fa-solid fa-chart-column project-thumb-icon"></i>
+        <div class="project-thumb-glow"></div>
+      </div>
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">Excel</span>
@@ -235,12 +333,20 @@
         </div>
         <div class="project-title">Sales Performance Dashboard</div>
         <div class="project-desc">Analysed 12 months of mock sales data in Excel. Built PivotTable reports and charts to identify top products, seasonal trends, and underperforming regions.</div>
-        <a href="#" class="project-link">View project →</a>
+        <a href="#" class="project-link">
+          View project
+          <span class="project-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-thumb green">🏪</div>
+    <div class="project-card reveal-up" style="--reveal-delay:0.18s">
+      <div class="project-thumb green" aria-hidden="true">
+        <i class="fa-solid fa-store project-thumb-icon"></i>
+        <div class="project-thumb-glow"></div>
+      </div>
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">Power BI</span>
@@ -249,12 +355,20 @@
         </div>
         <div class="project-title">Retail Inventory Report</div>
         <div class="project-desc">Power BI report tracking stock levels, turnover rates, and reorder alerts. Applied DAX to calculate dynamic KPIs across product categories.</div>
-        <a href="#" class="project-link">View project →</a>
+        <a href="#" class="project-link">
+          View project
+          <span class="project-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-thumb orange">🏦</div>
+    <div class="project-card reveal-up" style="--reveal-delay:0.26s">
+      <div class="project-thumb orange" aria-hidden="true">
+        <i class="fa-solid fa-landmark project-thumb-icon"></i>
+        <div class="project-thumb-glow"></div>
+      </div>
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">SQL</span>
@@ -263,30 +377,59 @@
         </div>
         <div class="project-title">Bank Transaction Analysis</div>
         <div class="project-desc">Used SQL to query a sample transactions database, then visualised spending patterns and anomaly trends in Tableau Public.</div>
-        <a href="#" class="project-link">View project →</a>
+        <a href="#" class="project-link">
+          View project
+          <span class="project-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- CONTACT -->
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
 <section id="contact">
-  <p class="section-label">Let's Connect</p>
-  <h2>Open to opportunities</h2>
-  <p class="section-intro">Internships, freelance data projects, or just a conversation about analytics — I'm always happy to connect.</p>
+  <p class="section-label reveal-up">Let's Connect</p>
+  <h2 class="reveal-up" style="--reveal-delay:0.05s">Open to opportunities</h2>
+  <p class="section-intro reveal-up" style="--reveal-delay:0.1s">Internships, freelance data projects, or just a conversation about analytics — I'm always happy to connect.</p>
 
-  <div class="contact-links">
-    <a href="mailto:salimmannakadavan@gmail.com" class="contact-link"><span>✉️</span> salimmannakadavan@gmail.com</a>
-    <a href="https://www.linkedin.com/in/salimmannakadavan/" target="_blank" class="contact-link"><span>🔗</span> LinkedIn</a>
-    <a href="https://github.com/SalimShakir" target="_blank" class="contact-link"><span>🐙</span> GitHub</a>
+  <div class="contact-links reveal-up" style="--reveal-delay:0.18s">
+
+    <a href="mailto:salimmannakadavan@gmail.com" class="contact-link contact-link--email">
+      <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+      <span class="contact-label">salimmannakadavan@gmail.com</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/salimmannakadavan/" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--linkedin">
+      <span class="contact-icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+      <span class="contact-label">LinkedIn</span>
+    </a>
+
+    <a href="https://github.com/SalimShakir" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--github">
+      <span class="contact-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
+      <span class="contact-label">GitHub</span>
+    </a>
+
   </div>
 </section>
 
-<!-- FOOTER -->
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer>
   <span>© 2026 Salim Shakir Mannakadavan</span>
-  <span>BCom · Data Analytics · Kerala, India</span>
+  <span class="footer-sep" aria-hidden="true">·</span>
+  <span class="footer-sub">BCom · Data Analytics · Kerala, India</span>
 </footer>
+
+
+<!-- Script -->
 <script src="script.js"></script>
 </body>
 </html>
