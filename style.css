@@ -34,8 +34,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 18px 5vw;
-      background: rgba(247,246,242,0.85);
-      backdrop-filter: blur(12px);
+      background:rgba(255,255,255,.65);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+box-shadow:0 6px 25px rgba(0,0,0,.05);
       border-bottom: 1px solid var(--grid);
     }
     .nav-logo {
@@ -46,18 +51,51 @@
       text-decoration: none;
       font-weight: 500;
     }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a {
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent); }
+    .nav-links a{
+    position:relative;
+    font-size:.82rem;
+    font-weight:500;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    text-decoration:none;
 
+    transition:.35s;
+}
+
+.nav-links a:hover{
+    color:var(--accent);
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-7px;
+
+width:0;
+
+height:2px;
+
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+
+transform:translateX(-50%);
+
+transition:.35s;
+
+border-radius:10px;
+
+}
+
+.nav-links a:hover::after{
+
+width:100%;
+
+}
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
