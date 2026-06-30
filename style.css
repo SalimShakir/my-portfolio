@@ -1220,73 +1220,89 @@ footer {
 /* ===========================
 PROJECT PAGE
 =========================== */
-/* ==========================
-   PROJECT PAGE
-========================== */
+/* ===========================
+PROJECT PAGE (UPGRADED)
+=========================== */
 
-.project-header{
-    padding:
-    calc(var(--nav-height) + 50px)
-    5vw
-    70px;
+.project-hero-img{
+    padding: 40px 5vw 0;
 }
 
-.back-link{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    color:var(--accent);
-    font-family:var(--mono);
-    margin-bottom:40px;
+.project-hero-img img{
+    width: 100%;
+    border-radius: 18px;
+    border: 1px solid var(--grid);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
-.project-label{
-    color:var(--accent);
-    font-family:var(--mono);
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    margin-bottom:16px;
+/* content spacing */
+.project-content{
+    padding: 60px 5vw;
 }
 
-.project-hero{
-
-    max-width:850px;
-
+/* stats */
+.project-stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
 }
 
-.project-hero h1{
-
-    margin-bottom:20px;
-
+.project-stats div{
+    padding: 18px;
+    border: 1px solid var(--grid);
+    border-radius: 14px;
+    text-align: center;
+    background: var(--bg);
 }
 
-.project-subtitle{
-
-    color:var(--ink-soft);
-
-    line-height:1.8;
-
-    margin:22px 0 34px;
-
-    max-width:720px;
-
+.project-stats strong{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--accent);
 }
 
-.project-banner{
-
-    padding:0 5vw 90px;
-
+.project-stats span{
+    font-size: 0.75rem;
+    color: var(--ink-soft);
 }
 
-.project-banner img{
+/* sections */
+.project-section{
+    margin-bottom: 60px;
+}
 
-    width:100%;
+.project-section h2{
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+}
 
-    border-radius:18px;
+.project-section p{
+    color: var(--ink-soft);
+    line-height: 1.8;
+}
 
-    border:1px solid var(--grid);
+.project-section img{
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 14px;
+    border: 1px solid var(--grid);
+}
 
-    display:block;
+/* center section */
+.project-section.center{
+    text-align: center;
+}
 
+/* responsive */
+@media(max-width: 900px){
+    .project-stats{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px){
+    .project-stats{
+        grid-template-columns: 1fr;
+    }
 }
