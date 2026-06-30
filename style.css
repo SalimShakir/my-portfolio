@@ -1217,3 +1217,88 @@ footer {
     transform: none !important;
   }
 }
+/* ===========================
+PROJECT PAGE
+=========================== */
+
+/* your new project page CSS goes here */
+   
+.project-header{
+
+padding:90px 0 60px;
+
+}
+
+.back-link{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:45px;
+
+text-decoration:none;
+
+color:var(--accent);
+
+font-weight:600;
+
+}
+
+.back-link:hover{
+
+opacity:.8;
+
+}
+
+.project-label{
+
+color:var(--accent);
+
+font-size:.9rem;
+
+font-weight:600;
+
+text-transform:uppercase;
+
+letter-spacing:.08em;
+
+margin-bottom:15px;
+
+}
+
+.project-hero h1{
+
+font-size:3rem;
+
+margin-bottom:20px;
+
+line-height:1.2;
+
+}
+
+.project-subtitle{
+
+max-width:720px;
+
+font-size:1.05rem;
+
+line-height:1.8;
+
+color:var(--ink-soft);
+
+margin-bottom:30px;
+
+}
+
+@media(max-width:768px){
+
+.project-hero h1{
+
+font-size:2.1rem;
+
+}
+
+}
