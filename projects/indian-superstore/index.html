@@ -1,3 +1,6 @@
+Here are the final two files, ready to drop into your portfolio (place them next to each other; the HTML already links to project-page.css):
+
+📄 indian-superstore-dashboard.html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +11,7 @@
 
     <title>Indian Superstore Dashboard | Salim Shakir</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-page.css">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -18,65 +21,88 @@
 <body>
     <div class="project-page">
 
+<!-- HERO -->
 <header class="project-header">
 
-    <a href="/" class="back-link">
+    <a href="/" class="back-link" data-testid="back-link">
         <i class="fa-solid fa-arrow-left"></i>
         Back to Portfolio
     </a>
 
-    <div class="project-hero">
+    <div class="hero-grid">
 
-        <p class="project-label">Power BI Project</p>
+        <!-- LEFT: title, subtitle, tool chips, CTAs -->
+        <div class="hero-left">
 
-        <h1>Indian Superstore Sales Analytics Dashboard</h1>
+            <p class="project-label">Power BI Project</p>
 
-        <p class="project-subtitle">
-            An interactive Business Intelligence dashboard built using Power BI
-            from an India-focused version of the Global Superstore dataset.
-            It demonstrates data cleaning, transformation, DAX measures, and dashboard design.
-        </p>
+            <h1>Indian Superstore Sales Analytics Dashboard</h1>
 
-        <div class="project-tags">
-            <span class="tag">Power BI</span>
-            <span class="tag">DAX</span>
-            <span class="tag">Power Query</span>
-            <span class="tag">Excel</span>
+            <p class="project-subtitle">
+                An interactive Business Intelligence dashboard built from an India-focused
+                version of the Global Superstore dataset &mdash; covering data cleaning,
+                transformation, DAX measures, and report design.
+            </p>
+
+            <div class="chip-row">
+                <span class="chip"><i class="fa-solid fa-chart-simple"></i> Power BI</span>
+                <span class="chip"><i class="fa-solid fa-database"></i> Power Query</span>
+                <span class="chip"><i class="fa-solid fa-calculator"></i> DAX</span>
+            </div>
+
+            <div class="hero-cta">
+
+                <a class="btn-primary"
+                   href="https://app.powerbi.com/groups/me/reports/8665abf7-ea2a-448a-bc7a-e0db8feccc27?ctid=789a7d0d-b817-4cbd-aecb-fbc2a7017168&pbi_source=linkShare"
+                   target="_blank"
+                   rel="noopener"
+                   data-testid="interact-live-btn">
+                    <i class="fa-solid fa-bolt"></i>
+                    Interact Live
+                </a>
+
+                <a class="btn-ghost"
+                   href="https://github.com/SalimShakir/Indian-superstore-dashboard"
+                   target="_blank"
+                   rel="noopener"
+                   data-testid="github-btn">
+                    <i class="fab fa-github"></i>
+                    View Source
+                </a>
+
+            </div>
+
         </div>
 
-        <!-- HERO STATS -->
-        <section class="project-stats">
+        <!-- RIGHT: compact stats panel -->
+        <aside class="hero-right" aria-label="Project at a glance">
 
-            <div>
-                <strong>3</strong>
-                <span>Dashboard Pages</span>
-            </div>
+            <p class="panel-label">At a glance</p>
 
-            <div>
-                <strong>6+</strong>
-                <span>DAX Measures</span>
-            </div>
+            <ul class="stat-list">
+                <li>
+                    <strong>3</strong>
+                    <span>Dashboard Pages</span>
+                </li>
+                <li>
+                    <strong>6+</strong>
+                    <span>DAX Measures</span>
+                </li>
+                <li>
+                    <strong>3</strong>
+                    <span>Calculated Columns</span>
+                </li>
+                <li>
+                    <strong>Retail</strong>
+                    <span>Dataset Focus</span>
+                </li>
+            </ul>
 
-            <div>
-                <strong>3</strong>
-                <span>Calculated Columns</span>
-            </div>
-
-            <div>
-                <strong>Retail</strong>
-                <span>Dataset</span>
-            </div>
-
-        </section>
+        </aside>
 
     </div>
 
 </header>
-
-<!-- SINGLE LARGE HERO PREVIEW -->
-<section class="project-hero-img">
-    <img src="../assets/images/overview.png" alt="Indian Superstore dashboard overview">
-</section>
 
 <main class="project-content">
 
@@ -93,35 +119,6 @@
             performance, customer behaviour, profitability, shipping efficiency, and regional
             trends at a glance.
         </p>
-
-    </section>
-
-    <!-- TOOLS & FEATURES -->
-    <section class="project-section">
-
-        <h2>Tools &amp; Features</h2>
-
-        <div class="feature-grid">
-
-            <div class="feature-card">
-                <i class="fa-solid fa-chart-simple"></i>
-                <h3>Power BI</h3>
-                <p>Designed an interactive three-page dashboard with KPI cards, charts, slicers, and drill-down analysis.</p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fa-solid fa-database"></i>
-                <h3>Power Query</h3>
-                <p>Cleaned and transformed the Global Superstore dataset to include only Indian retail transactions.</p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fa-solid fa-calculator"></i>
-                <h3>DAX</h3>
-                <p>Built calculated columns and measures to deliver meaningful, decision-ready business metrics.</p>
-            </div>
-
-        </div>
 
     </section>
 
@@ -227,15 +224,17 @@
 
     </section>
 
-    <!-- GITHUB CTA -->
+    <!-- BOTTOM CTA -->
     <section class="project-section center">
 
         <a class="btn-primary"
-           href="https://github.com/SalimShakir/Indian-superstore-dashboard"
-           target="_blank">
+           href="https://app.powerbi.com/groups/me/reports/8665abf7-ea2a-448a-bc7a-e0db8feccc27?ctid=789a7d0d-b817-4cbd-aecb-fbc2a7017168&pbi_source=linkShare"
+           target="_blank"
+           rel="noopener"
+           data-testid="interact-live-btn-bottom">
 
-            <i class="fab fa-github"></i>
-            View Source Code
+            <i class="fa-solid fa-bolt"></i>
+            Open Live Power BI Report
 
         </a>
 
