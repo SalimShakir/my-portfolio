@@ -21,7 +21,7 @@
     <div class="project-page">
 
 <!-- HERO -->
-<header class="project-header">
+<header class="project-header reveal">
 
     <a href="/" class="back-link" data-testid="back-link">
         <i class="fa-solid fa-arrow-left"></i>
@@ -31,7 +31,7 @@
     <div class="hero-grid">
 
         <!-- LEFT: title, subtitle, tool chips, CTAs -->
-        <div class="hero-left">
+        <div class="hero-left reveal from-left">
 
             <p class="project-label">Power BI Project</p>
 
@@ -74,7 +74,7 @@
         </div>
 
         <!-- RIGHT: compact stats panel -->
-        <aside class="hero-right" aria-label="Project at a glance">
+        <aside class="hero-right reveal from-right" aria-label="Project at a glance">
 
             <p class="panel-label">At a glance</p>
 
@@ -106,7 +106,7 @@
 <main class="project-content">
 
     <!-- OVERVIEW -->
-    <section class="project-section">
+    <section class="project-section reveal">
 
         <h2>Overview</h2>
 
@@ -122,12 +122,12 @@
     </section>
 
     <!-- DASHBOARD SHOWCASE -->
-    <section class="project-section showcase-section">
+    <section class="project-section showcase-section reveal">
 
         <h2>Dashboard Showcase</h2>
         <p>A closer look at each page of the report and the questions it was built to answer.</p>
 
-        <section class="dashboard-section">
+        <section class="dashboard-section reveal from-left">
 
             <img src="../assets/images/overview.png" alt="Sales overview dashboard page">
 
@@ -148,7 +148,7 @@
 
         </section>
 
-        <section class="dashboard-section reverse">
+        <section class="dashboard-section reverse reveal from-right">
 
             <img src="../assets/images/order-analysis.png" alt="Order analysis dashboard page">
 
@@ -169,7 +169,7 @@
 
         </section>
 
-        <section class="dashboard-section">
+        <section class="dashboard-section reveal from-left">
 
             <img src="../assets/images/regional-analysis.png" alt="Regional analysis dashboard page">
 
@@ -193,28 +193,28 @@
     </section>
 
     <!-- KEY INSIGHTS -->
-    <section class="project-section">
+    <section class="project-section reveal">
 
         <h2>Key Insights</h2>
 
-        <div class="insight-grid">
+        <div class="insight-grid" style="--step:120ms;">
 
-            <div class="insight-card">
+            <div class="insight-card reveal zoom-in" style="--i:0">
                 <i class="fa-solid fa-ranking-star"></i>
                 <p>Identified the top-performing product categories driving overall revenue.</p>
             </div>
 
-            <div class="insight-card">
+           <div class="insight-card reveal zoom-in" style="--i:1">
                 <i class="fa-solid fa-map-location-dot"></i>
                 <p>Mapped regional sales distribution to surface high-performing states.</p>
             </div>
 
-            <div class="insight-card">
+           <div class="insight-card reveal zoom-in" style="--i:2">
                 <i class="fa-solid fa-percent"></i>
                 <p>Analysed profitability against discount levels to flag margin risk.</p>
             </div>
 
-            <div class="insight-card">
+            <div class="insight-card reveal zoom-in" style="--i:3">
                 <i class="fa-solid fa-truck-fast"></i>
                 <p>Measured order-to-ship time to evaluate shipping efficiency.</p>
             </div>
@@ -224,7 +224,7 @@
     </section>
 
     <!-- BOTTOM CTA -->
-    <section class="project-section center">
+    <section class="project-section center reveal zoom-in">
 
         <a class="btn-primary"
            href="https://app.powerbi.com/groups/me/reports/8665abf7-ea2a-448a-bc7a-e0db8feccc27?ctid=789a7d0d-b817-4cbd-aecb-fbc2a7017168&pbi_source=linkShare"
