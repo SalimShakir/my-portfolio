@@ -1223,7 +1223,72 @@ PROJECT PAGE
 /* ===========================
 PROJECT PAGE (UPGRADED)
 =========================== */
+.project-header{
+    padding:
+    calc(var(--nav-height) + 50px)
+    5vw
+    70px;
+}
 
+.back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:var(--accent);
+    font-family:var(--mono);
+    margin-bottom:40px;
+}
+
+.project-label{
+    color:var(--accent);
+    font-family:var(--mono);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:16px;
+}
+
+.project-hero{
+
+    max-width:850px;
+
+}
+
+.project-hero h1{
+
+    margin-bottom:20px;
+
+}
+
+.project-subtitle{
+
+    color:var(--ink-soft);
+
+    line-height:1.8;
+
+    margin:22px 0 34px;
+
+    max-width:720px;
+
+}
+
+.project-banner{
+
+    padding:0 5vw 90px;
+
+}
+
+.project-banner img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    border:1px solid var(--grid);
+
+    display:block;
+
+}
 .project-hero-img{
     padding: 40px 5vw 0;
 }
