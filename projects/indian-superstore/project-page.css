@@ -417,4 +417,149 @@ p { margin:0; }
     .stat-list strong{ font-size:1.2rem; }
 
 }
+/* ============================================================
+   HOVER POLISH
+   ============================================================ */
 
+/* subtle parallax tilt on the stats panel */
+.hero-right{
+    transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+}
+.hero-right:hover{
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 22px 50px rgba(37,99,235,.10);
+}
+
+/* each stat row glows on hover */
+.stat-list li{
+    transition: padding .25s ease, color .25s ease;
+}
+.stat-list li:hover{
+    padding-left: 10px;
+}
+.stat-list li:hover strong{
+    color: #1d4ed8;
+}
+
+/* chip shine on hover */
+.chip{
+    position: relative;
+    overflow: hidden;
+}
+.chip::after{
+    content: "";
+    position: absolute;
+    top: 0; left: -120%;
+    width: 60%; height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(37,99,235,.18) 50%,
+        transparent 100%
+    );
+    transition: left .55s ease;
+}
+.chip:hover::after{ left: 130%; }
+
+/* primary button — animated bolt + lift */
+.btn-primary i{
+    transition: transform .35s ease;
+}
+.btn-primary:hover i{
+    transform: rotate(-12deg) scale(1.15);
+}
+
+/* ghost button — fill on hover */
+.btn-ghost{
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.btn-ghost::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .35s ease;
+    z-index: -1;
+}
+.btn-ghost:hover{
+    color: #fff;
+    border-color: var(--accent);
+}
+.btn-ghost:hover::before{
+    transform: scaleX(1);
+}
+
+/* showcase image — zoom inside its frame */
+.dashboard-section{
+    perspective: 1200px;
+}
+.dashboard-section img{
+    will-change: transform;
+}
+.dashboard-section:hover img{
+    transform: translateY(-6px) scale(1.015) rotateX(.5deg);
+    box-shadow: 0 32px 70px rgba(0,0,0,.16);
+}
+
+/* insight cards — icon pop */
+.insight-card i{
+    transition: transform .35s ease, background .35s ease;
+}
+.insight-card:hover i{
+    transform: rotate(-8deg) scale(1.1);
+    background: rgba(37,99,235,.16);
+}
+
+/* underline draw for section headings */
+.project-section h2{
+    position: relative;
+    display: inline-block;
+}
+.project-section h2::after{
+    content: "";
+    position: absolute;
+    left: 0; bottom: -8px;
+    width: 0; height: 3px;
+    background: var(--accent);
+    border-radius: 999px;
+    transition: width .5s ease;
+}
+.project-section:hover h2::after{ width: 48px; }
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+
+.reveal{
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity .7s cubic-bezier(.2,.7,.2,1),
+        transform .7s cubic-bezier(.2,.7,.2,1);
+    will-change: opacity, transform;
+}
+
+.reveal.from-left  { transform: translate(-32px, 0); }
+.reveal.from-right { transform: translate( 32px, 0); }
+.reveal.zoom-in    { transform: scale(.96); }
+
+.reveal.in-view{
+    opacity: 1;
+    transform: none;
+}
+
+/* stagger helper — set --i on the parent */
+.stagger > *{ transition-delay: calc(var(--step, 90ms) * var(--i, 0)); }
+
+@media (prefers-reduced-motion: reduce){
+    .reveal,
+    .reveal.in-view{
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
