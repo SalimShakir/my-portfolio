@@ -4,7 +4,6 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Indian Superstore Dashboard | Salim Shakir</title>
@@ -13,60 +12,134 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
 <header class="project-header">
 
-   
+    <a href="/" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Portfolio
+    </a>
 
-        <a href="/" class="back-link">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Portfolio
-        </a>
+    <p class="project-label">Power BI Project</p>
 
-        <div class="project-hero">
+    <h1>Indian Superstore Sales Analytics Dashboard</h1>
 
-            <p class="project-label">
-    Power BI Project
-</p>
+    <p class="project-subtitle">
+        An interactive Business Intelligence dashboard built using Power BI
+        from an India-focused version of the Global Superstore dataset.
+        It demonstrates data cleaning, transformation, DAX measures, and dashboard design.
+    </p>
 
-<h1>
-    Indian Superstore Sales Analytics Dashboard
-</h1>
-
-<p class="project-subtitle">
-
-An interactive Business Intelligence dashboard built using Power BI from an India-focused version of the Global Superstore dataset. The project demonstrates data cleaning, transformation, DAX calculations, and dashboard design to uncover meaningful retail insights.
-
-</p>
-
-<div class="project-tags">
-
-    <span class="tag">Power BI</span>
-
-    <span class="tag">DAX</span>
-
-    <span class="tag">Power Query</span>
-
-    <span class="tag">Excel</span>
-
-</div>
-
-      
-
-        </div>
-
+    <div class="project-tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag">Power Query</span>
+        <span class="tag">Excel</span>
     </div>
 
 </header>
 
-<main>
+<!-- HERO IMAGE -->
+<section class="project-hero-img">
+    <img src="../assets/images/overview.png" alt="Dashboard Overview">
+</section>
+
+<main class="project-content">
+
+    <!-- STATS -->
+    <section class="project-stats">
+
+        <div>
+            <strong>3</strong>
+            <span>Dashboard Pages</span>
+        </div>
+
+        <div>
+            <strong>6+</strong>
+            <span>DAX Measures</span>
+        </div>
+
+        <div>
+            <strong>3</strong>
+            <span>Calculated Columns</span>
+        </div>
+
+        <div>
+            <strong>Retail</strong>
+            <span>Dataset</span>
+        </div>
+
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="project-section">
+
+        <h2>Overview</h2>
+
+        <p>
+            The Global Superstore dataset was filtered to include only Indian sales data.
+            The dataset was cleaned using Power Query, followed by data modeling in Power BI.
+            Multiple DAX measures and calculated columns were created to enhance analytical depth.
+        </p>
+
+    </section>
+
+    <!-- DASHBOARD SECTIONS -->
+    <section class="project-section">
+
+        <h2>Sales Overview</h2>
+        <img src="../assets/images/overview.png">
+
+    </section>
+
+    <section class="project-section">
+
+        <h2>Order Analysis</h2>
+        <img src="../assets/images/order-analysis.png">
+
+    </section>
+
+    <section class="project-section">
+
+        <h2>Location Analysis</h2>
+        <img src="../assets/images/location-analysis.png">
+
+    </section>
+
+    <!-- INSIGHTS -->
+    <section class="project-section">
+
+        <h2>Key Insights</h2>
+
+        <ul>
+            <li>Identified top-performing product categories</li>
+            <li>Analyzed profitability vs discount trends</li>
+            <li>Observed regional sales distribution patterns</li>
+            <li>Measured order efficiency using delivery time metrics</li>
+        </ul>
+
+    </section>
+
+    <!-- GITHUB -->
+    <section class="project-section center">
+
+        <a class="btn-primary"
+           href="https://github.com/SalimShakir/Indian-superstore-dashboard"
+           target="_blank">
+
+            <i class="fab fa-github"></i>
+            View Source Code
+
+        </a>
+
+    </section>
 
 </main>
 
 </body>
-   
 
 </html>
