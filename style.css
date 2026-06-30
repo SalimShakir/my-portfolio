@@ -1334,7 +1334,7 @@ PROJECT PAGE (UPGRADED)
 
 /* sections */
 .project-section{
-    margin-bottom: 60px;
+    margin: 70px 0;
 }
 
 .project-section h2{
@@ -1343,8 +1343,14 @@ PROJECT PAGE (UPGRADED)
 }
 
 .project-section p{
-    color: var(--ink-soft);
-    line-height: 1.8;
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    color:var(--ink-soft);
+
+}
 }
 
 .project-section img{
@@ -1447,11 +1453,22 @@ margin:70px 0;
 
 .dashboard-section img{
 
-width:50%;
+ width:38%;
+
+    min-width:330px;
 
 border-radius:14px;
 
 border:1px solid var(--grid);
+    transition:.35s ease;
+
+
+}
+.dashboard-section img:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 50px rgba(0,0,0,.12);
 
 }
 
@@ -1483,7 +1500,9 @@ padding-left:18px;
 
 line-height:2;
 
-color:var(--ink-soft);
+color:var(--ink-soft)
+   font-size:1rem;
+
 
 }
 
@@ -1513,4 +1532,14 @@ width:100%;
     }
 
 }
+.project-page{
+
+    min-height:100vh;
+
+    background-image:
+        linear-gradient(rgba(37,99,235,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37,99,235,.04) 1px, transparent 1px);
+
+    background-size:40px 40px;
+
 }
