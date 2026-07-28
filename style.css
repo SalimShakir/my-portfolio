@@ -861,6 +861,8 @@ h2 {
   overflow: hidden;
   background: var(--bg);
   transition: box-shadow 0.3s var(--ease-out-expo), border-color 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 .project-card:hover {
   box-shadow:
