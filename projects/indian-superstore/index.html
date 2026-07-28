@@ -17,7 +17,7 @@
     <link rel="manifest" href="../site.webmanifest">
     <meta name="theme-color" content="#2563eb">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="indian-superstore/project-page.css">
+    <link rel="stylesheet" href="project-page.css">
     
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -59,21 +59,12 @@
             <div class="hero-cta">
 
                 <a class="btn-primary"
-                   href="https://app.powerbi.com/groups/me/reports/8665abf7-ea2a-448a-bc7a-e0db8feccc27?ctid=789a7d0d-b817-4cbd-aecb-fbc2a7017168&pbi_source=linkShare"
-                   target="_blank"
-                   rel="noopener"
-                   data-testid="interact-live-btn">
-                    <i class="fa-solid fa-bolt"></i>
-                    Interact Live
-                </a>
-
-                <a class="btn-ghost"
                    href="https://github.com/SalimShakir/Indian-superstore-dashboard"
                    target="_blank"
                    rel="noopener"
                    data-testid="github-btn">
                     <i class="fab fa-github"></i>
-                    View Source
+                    View GitHub Repository
                 </a>
 
             </div>
@@ -128,6 +119,31 @@
 
     </section>
 
+    <!-- INTERACTIVE DASHBOARD -->
+    <section class="project-section reveal">
+
+        <p class="project-label reveal">🟢 Live Interactive Dashboard</p>
+
+        <h2>Interactive Dashboard</h2>
+        <p class="section-intro reveal">Explore the live Power BI dashboard with full interactivity including filters, drill-downs, tooltips, page navigation, and slicers.</p>
+
+        <div class="powerbi-container reveal">
+
+            <iframe title="Sales-Performance-Dashboard"
+                    width="100%"
+                    height="850"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiMWE4ZmE3YmUtNDBmZS00YjNmLWI5NjEtNzM5MGE2MDQ5ZjI5IiwidCI6ImExNjA4YjEyLWI5OWEtNGM5NC04MWUzLTExODk0Nzk0MzYxNiJ9"
+                    frameborder="0"
+                    allowFullScreen="true"
+                    loading="lazy">
+            </iframe>
+
+        </div>
+
+        <p class="dashboard-tip reveal">Tip: Use the filters, slicers, and page navigation inside the report to explore different business insights.</p>
+
+    </section>
+
     <!-- DASHBOARD SHOWCASE -->
     <section class="project-section showcase-section reveal">
 
@@ -136,7 +152,7 @@
 
         <section class="dashboard-section reveal from-left">
 
-            <img src="../assets/images/overview.png" alt="Sales overview dashboard page">
+            <img src="./images/overview.png" alt="Sales overview dashboard page">
 
             <div>
                 <span class="project-label">Page 01</span>
@@ -157,7 +173,7 @@
 
         <section class="dashboard-section reverse reveal from-right">
 
-            <img src="../assets/images/order-analysis.png" alt="Order analysis dashboard page">
+            <img src="./images/order-analysis.png" alt="Order analysis dashboard page">
 
             <div>
                 <span class="project-label">Page 02</span>
@@ -178,7 +194,7 @@
 
         <section class="dashboard-section reveal from-left">
 
-            <img src="../assets/images/regional-analysis.png" alt="Regional analysis dashboard page">
+            <img src="./images/regional-analysis.png" alt="Regional analysis dashboard page">
 
             <div>
                 <span class="project-label">Page 03</span>
@@ -234,13 +250,22 @@
     <section class="project-section center reveal zoom-in">
 
         <a class="btn-primary"
-           href="https://app.powerbi.com/groups/me/reports/8665abf7-ea2a-448a-bc7a-e0db8feccc27?ctid=789a7d0d-b817-4cbd-aecb-fbc2a7017168&pbi_source=linkShare"
+           href="https://github.com/SalimShakir/Indian-superstore-dashboard"
            target="_blank"
            rel="noopener"
-           data-testid="interact-live-btn-bottom">
+           data-testid="github-btn-bottom">
 
-            <i class="fa-solid fa-bolt"></i>
-            Open Live Power BI Report
+            <i class="fab fa-github"></i>
+            View GitHub Repository
+
+        </a>
+
+        <a class="btn-ghost"
+           href="/"
+           data-testid="back-btn-bottom">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Portfolio
 
         </a>
 

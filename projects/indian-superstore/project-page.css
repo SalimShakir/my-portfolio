@@ -399,23 +399,37 @@ p { margin:0; }
 
 }
 
-@media (max-width: 500px){
 
-    .project-header{
-        padding:calc(var(--nav-height) + 24px) 6vw 44px;
-    }
+/* ---------- INTERACTIVE DASHBOARD ---------- */
 
-    .project-content{
-        padding:20px 6vw 80px;
-    }
+.powerbi-container{
+    width:100%;
+    margin:0 auto 24px;
+    border-radius:0;
+    overflow:hidden;
+    background:transparent;
+    border:1px solid var(--grid);
+    box-shadow:
+        0 2px 4px rgba(0,0,0,0.04),
+        0 8px 32px rgba(0,0,0,0.08);
+    padding:0;
+}
 
-    .project-section{ margin:54px 0; }
+.powerbi-container iframe{
+    display:block;
+    width:100%;
+    margin:0;
+    aspect-ratio: 1200 / 850;
+    border:none;
+    border-radius:0;
+}
 
-    .hero-cta{ flex-direction:column; align-items:stretch; }
-    .btn-primary, .btn-ghost{ justify-content:center; }
-
-    .stat-list strong{ font-size:1.2rem; }
-
+.dashboard-tip{
+    text-align:center;
+    font-size:.92rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin-top:8px;
 }
 /* ============================================================
    HOVER POLISH
