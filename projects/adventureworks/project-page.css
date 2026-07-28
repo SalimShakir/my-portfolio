@@ -291,10 +291,20 @@ p { margin:0; }
 
 .dashboard-tip{
     text-align:center;
-    font-size:.92rem;
+    font-size:.88rem;
     color:var(--ink-soft);
     font-style:italic;
     margin-top:8px;
+}
+@media (max-width: 768px) {
+    .dashboard-tip {
+        font-size: .8rem;
+    }
+}
+@media (max-width: 480px) {
+    .dashboard-tip {
+        font-size: .75rem;
+    }
 }
 
 /* ---------- MOBILE EMBED FIX ---------- */
