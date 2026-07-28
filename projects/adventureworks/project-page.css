@@ -270,6 +270,13 @@ p { margin:0; }
     margin-top:8px;
 }
 
+/* ---------- MOBILE EMBED FIX ---------- */
+@media (max-width: 767px) {
+    .powerbi-container iframe {
+        aspect-ratio: 16 / 9;
+    }
+}
+
 /* ---------- WORKFLOW ---------- */
 
 .workflow{

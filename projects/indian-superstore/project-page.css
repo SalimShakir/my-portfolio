@@ -431,6 +431,14 @@ p { margin:0; }
     font-style:italic;
     margin-top:8px;
 }
+
+/* ---------- MOBILE EMBED FIX ---------- */
+@media (max-width: 767px) {
+    .powerbi-container iframe {
+        aspect-ratio: 16 / 9;
+    }
+}
+
 /* ============================================================
    HOVER POLISH
    ============================================================ */
