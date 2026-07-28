@@ -273,7 +273,27 @@ p { margin:0; }
 /* ---------- MOBILE EMBED FIX ---------- */
 @media (max-width: 767px) {
     .powerbi-container iframe {
-        aspect-ratio: 16 / 9;
+        display: none;
+    }
+    .powerbi-mobile-preview {
+        display: block;
+    }
+    .powerbi-mobile-preview img {
+        width: 100%;
+        border-radius: 16px;
+        border: 1px solid var(--grid);
+        box-shadow: 0 22px 56px rgba(0,0,0,.10);
+        margin-bottom: 16px;
+    }
+    .open-dashboard-btn {
+        display: inline-flex;
+        width: auto;
+        justify-content: center;
+    }
+}
+@media (min-width: 768px) {
+    .powerbi-mobile-preview {
+        display: none;
     }
 }
 
