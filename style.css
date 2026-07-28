@@ -863,6 +863,7 @@ h2 {
   transition: box-shadow 0.3s var(--ease-out-expo), border-color 0.3s;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .project-card:hover {
   box-shadow:
@@ -910,7 +911,7 @@ h2 {
 .project-card:hover .project-thumb-glow { opacity: 1; }
 
 /* Card body */
-.project-body { padding: 22px; }
+.project-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -953,6 +954,7 @@ h2 {
   align-items: center;
   gap: 7px;
   transition: gap 0.2s var(--ease-spring), color 0.2s;
+  margin-top: auto;
 }
 .project-link:hover { gap: 12px; }
 
